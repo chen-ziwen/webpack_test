@@ -3,3 +3,9 @@
   height: 300px;
   background-color: #3b6696;
 }
+
+.test img {
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+}
