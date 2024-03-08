@@ -8,10 +8,24 @@ module.exports = {
     // 入口文件就是一些需要被编译到dist中的js文件
     // 编译后的js文件通过script引入到html中
     entry: {
-        index: "./src/index.js",
-        print: "./src/print.js",
-        banner: "./src/banner.js",
-        tabs: "./src/tabs.js",
+        index: {
+            import: "./src/index.js",
+            /*
+            如果说入口chunk中包含一些重复的模块，那么这些模块会被引入
+            到各个bundle中，这样非常不灵活且不能动态拆分程序逻辑中的核心代码，
+            而添加了dependOn: "shared"，就可以实现各个bundle中共享模块
+            */
+            dependOn: "shared"
+        },
+        print: {
+            import: "./src/print.js",
+            dependOn: "shared"
+        },
+        shared: 'lodash', // lodash在指定dependOn: "shared"的入口文件中共享
+
+        // 下面这两个已经被引入到index中了 不需要重复引入
+        // banner: "./src/banner.js",
+        // tabs: "./src/tabs.js",
     },
     // 编译出来的html执行时，哪里有报错可以明确的指定
     devtool: 'inline-source-map',
@@ -90,6 +104,8 @@ module.exports = {
     // 由于在这个示例中单个HTML页面有多个入口，
     // 所以添加了 optimization.runtimeChunk: 'single' 配置
     optimization: {
-        runtimeChunk: "single"
+        splitChunks: {
+            chunks: 'all',
+        },
     }
 }
