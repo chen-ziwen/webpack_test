@@ -533,7 +533,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/css/style.css */ "./src/assets/css/style.css");
-/* harmony import */ var _public_image_icon_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../public/image/icon.png */ "./public/image/icon.png");
+/* harmony import */ var _public_image_icon_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../public/image/icon.png */ "./public/image/icon.png");
 /* harmony import */ var _assets_text_data_xml__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/text/data.xml */ "./src/assets/text/data.xml");
 /* harmony import */ var _assets_text_data_xml__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_text_data_xml__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _assets_text_data_csv__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/text/data.csv */ "./src/assets/text/data.csv");
